@@ -7,9 +7,17 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --primary-color: rgb(244, 63, 94);
+  --primary-color-50: rgba(244, 63, 93, 0.5);
 }
 
 body {
   margin: 0;
   min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }

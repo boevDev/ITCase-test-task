@@ -1,0 +1,21 @@
+.container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info {
+  min-width: 320px;
+  background-color: var(--primary-color-50);
+  padding: 16px;
+}
+
+.title {
+  text-align: center;
+}
+
+.colors {
+  width: 100%;
+  padding: 8px;
+}

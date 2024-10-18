@@ -1,3 +1,4 @@
 export { Home } from './home';
-export { ProductList } from './product-list';
+export { Products } from './products';
+export { Product } from './product';
 export { Cart } from './cart';

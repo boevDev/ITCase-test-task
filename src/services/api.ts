@@ -1,12 +1,27 @@
+export interface IProduct {
+  id: number;
+  name: string;
+  colors: IProductColor[];
+}
+
+export interface IProductColor {
+  id: number;
+  name: string;
+  images: string[];
+  price: string;
+  description: string;
+  sizes: number[];
+}
+
 const sizes = [
   { id: 1, label: 'XS', number: 44 },
   { id: 2, label: 'S', number: 46 },
   { id: 3, label: 'M', number: 48 },
   { id: 4, label: 'L', number: 50 },
   { id: 5, label: 'XL', number: 52 },
-]
+];
 
-const products = [
+const products: IProduct[] = [
   {
     id: 1,
     name: 'Футболка',
@@ -68,64 +83,64 @@ const products = [
       },
     ],
   },
-]
+];
 
 function getSizes() {
   return new Promise((resolve) => {
-    setTimeout(() => resolve(sizes), 250)
-  })
+    setTimeout(() => resolve(sizes), 250);
+  });
 }
 
-function getSize(id) {
+function getSize(id: number) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      const size = sizes.find((size) => size.id == id)
+      const size = sizes.find((size) => size.id == id);
       if (size) {
-        resolve(size)
+        resolve(size);
       } else {
-        reject(new Error('getSize: Size not found'))
+        reject(new Error('getSize: Size not found'));
       }
-    }, 250)
-  })
+    }, 250);
+  });
 }
 
-function getProducts() {
+function getProducts(): Promise<IProduct[]> {
   return new Promise((resolve) => {
-    setTimeout(() => resolve(products), 250)
-  })
+    setTimeout(() => resolve(products), 250);
+  });
 }
 
-function getProduct(id) {
+function getProduct(id: number): Promise<IProduct> {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      const product = products.find((product) => product.id == id)
+      const product = products.find((product) => product.id == id);
       if (product) {
-        resolve(product)
+        resolve(product);
       } else {
-        reject(new Error('getProduct: Product not found'))
+        reject(new Error('getProduct: Product not found'));
       }
-    }, 250)
-  })
+    }, 250);
+  });
 }
 
-function getProductColor(productID, colorID) {
+function getProductColor(productID: number, colorID: number) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      const product = products.find((product) => product.id == productID)
+      const product = products.find((product) => product.id == productID);
 
       if (!product) {
-        return reject(new Error('getProductColor: Product not found'))
+        return reject(new Error('getProductColor: Product not found'));
       }
 
-      const color = product.colors.find((color) => color.id == colorID)
+      const color = product.colors.find((color) => color.id == colorID);
 
       if (color) {
-        resolve(color)
+        resolve(color);
       } else {
-        reject(new Error('getProductColor: Color not found'))
+        reject(new Error('getProductColor: Color not found'));
       }
-    }, 250)
-  })
+    }, 250);
+  });
 }
 
-export { getSizes, getSize, getProducts, getProduct, getProductColor }
+export { getSizes, getSize, getProducts, getProduct, getProductColor };
