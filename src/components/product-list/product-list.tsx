@@ -1,8 +1,8 @@
 import { FC } from 'react';
-import { IProduct } from '../../services/api';
 import { Loader } from '../loader/loader';
 import { ProductCard } from '../product-card/product-card';
 import styles from './style.module.css';
+import { IProduct } from '../../types/product';
 
 interface Props {
   products: IProduct[];

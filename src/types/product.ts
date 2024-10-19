@@ -21,9 +21,7 @@ export interface ISize {
 
 export interface IProductInCart {
   cartItemId: number;
-  id: number;
   name: string;
-  colorId: number;
   colorName: string;
   colorImage: string;
   size: ISize;

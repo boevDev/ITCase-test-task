@@ -34,9 +34,7 @@ export const ProductDetails: FC<Props> = observer(
       sizeItem &&
       cart.addProduct({
         cartItemId: cartArray.length + 1,
-        id: product.id,
         name: product.name,
-        colorId: colorItem.id,
         colorName: colorItem.name,
         colorImage: colorItem.images[0],
         price: colorItem.price,
