@@ -1,4 +1,4 @@
-export { Home } from './home';
-export { Products } from './products';
-export { Product } from './product';
-export { Cart } from './cart';
+export { Home } from './home/home';
+export { Products } from './products/products';
+export { Product } from './product/product';
+export { Cart } from './cart/cart';

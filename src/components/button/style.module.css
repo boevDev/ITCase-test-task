@@ -1,0 +1,12 @@
+button.btn {
+  padding: 16px;
+  border-radius: 8px;
+  color: white;
+  background-color: var(--primary-color);
+
+  transition: background-color 100ms ease-in-out;
+}
+
+button.btn:hover {
+  background-color: var(--primary-color-50);
+}

@@ -1,19 +1,6 @@
-export interface IProduct {
-  id: number;
-  name: string;
-  colors: IProductColor[];
-}
+import { IProduct, ISize } from '../types/product';
 
-export interface IProductColor {
-  id: number;
-  name: string;
-  images: string[];
-  price: string;
-  description: string;
-  sizes: number[];
-}
-
-const sizes = [
+const sizes: ISize[] = [
   { id: 1, label: 'XS', number: 44 },
   { id: 2, label: 'S', number: 46 },
   { id: 3, label: 'M', number: 48 },
@@ -85,13 +72,13 @@ const products: IProduct[] = [
   },
 ];
 
-function getSizes() {
+function getSizes(): Promise<ISize[]> {
   return new Promise((resolve) => {
     setTimeout(() => resolve(sizes), 250);
   });
 }
 
-function getSize(id: number) {
+function getSize(id: number): Promise<ISize> {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       const size = sizes.find((size) => size.id == id);

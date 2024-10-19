@@ -1,9 +1,10 @@
 import { FC, useEffect, useState } from 'react';
-import { getProducts, IProductType } from '../services/api';
-import { Container, ProductList } from '../components';
+import { getProducts } from '../../services/api';
+import { Container, ProductList } from '../../components';
+import { IProduct } from '../../types/product';
 
 export const Products: FC = () => {
-  const [products, setProducts] = useState<IProductType[]>([]);
+  const [products, setProducts] = useState<IProduct[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 

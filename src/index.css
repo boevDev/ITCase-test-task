@@ -1,7 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  font-family: 'Nunito Sans', sans-serif;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,4 +18,17 @@ body {
 a {
   text-decoration: none;
   color: black;
+}
+
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
 }

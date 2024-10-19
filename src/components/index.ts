@@ -4,3 +4,7 @@ export { ProductList } from './product-list/product-list';
 export { ProductCard } from './product-card/product-card';
 export { Header } from './header/header';
 export { ProductDetails } from './product-details/product-details';
+export { Button } from './button/button';
+export { Cart } from './cart/cart';
+export { CartList } from './cart-list/cart-list';
+export { CartItem } from './cart-item/cart-item';

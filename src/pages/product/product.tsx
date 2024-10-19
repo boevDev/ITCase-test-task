@@ -1,7 +1,9 @@
 import { FC, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { getProduct, IProduct } from '../services/api';
-import { Container, ProductDetails } from '../components';
+import { getProduct } from '../../services/api';
+import { Container, ProductDetails } from '../../components';
+import styles from './style.module.css';
+import { IProduct } from '../../types/product';
 
 export const Product: FC = () => {
   const [product, setProduct] = useState<IProduct>();
@@ -26,8 +28,10 @@ export const Product: FC = () => {
   }, [id]);
 
   return (
-    <Container>
-      <ProductDetails product={product} loading={loading} error={error} />
+    <Container className={styles.container}>
+      {product && (
+        <ProductDetails product={product} loading={loading} error={error} />
+      )}
     </Container>
   );
 };

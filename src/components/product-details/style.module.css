@@ -6,16 +6,57 @@
 }
 
 .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   min-width: 320px;
   background-color: var(--primary-color-50);
   padding: 16px;
+
+  border-radius: 16px;
 }
 
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 .title {
   text-align: center;
 }
 
 .colors {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sizes {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info label {
+  font-weight: 800;
+}
+
+.info select {
   width: 100%;
   padding: 8px;
+  border: 2px solid var(--primary-color);
+  background-color: white;
+
+  border-radius: 8px;
+}
+
+.info button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: rgb(69, 69, 69);
+}
+
+.info button:disabled:hover {
+  background-color: rgb(69, 69, 69);
 }
