@@ -12,10 +12,8 @@ class Cart {
     return this.cartArray.push(product);
   };
 
-  deleteProduct = (cartItemId: number) => {
-    return (this.cartArray = this.cartArray.filter(
-      (item) => item.cartItemId !== cartItemId
-    ));
+  deleteProduct = (id: Pick<IProductInCart, 'id'> | string) => {
+    return (this.cartArray = this.cartArray.filter((item) => item.id !== id));
   };
 
   cartCleaning = () => {

@@ -60,3 +60,22 @@
 .info button:disabled:hover {
   background-color: rgb(69, 69, 69);
 }
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.item1 {
+  background-color: cornflowerblue;
+}
+
+.item2 {
+  background-color: coral;
+}
+
+.item3 {
+  background-color: darkseagreen;
+}

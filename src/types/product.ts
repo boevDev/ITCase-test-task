@@ -20,7 +20,7 @@ export interface ISize {
 }
 
 export interface IProductInCart {
-  cartItemId: number;
+  id: string;
   name: string;
   colorName: string;
   colorImage: string;

@@ -1,0 +1,19 @@
+.window {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.allItemsContainer {
+  height: 100%;
+  display: flex;
+
+  transition: translate;
+  transition-property: transform;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+}
+
+.arrow {
+  cursor: pointer;
+}

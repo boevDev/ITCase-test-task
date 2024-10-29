@@ -11,7 +11,7 @@ export const CartItem: FC<IProductInCart> = ({
   colorName,
   colorImage,
   size,
-  cartItemId,
+  id,
 }) => {
   const { deleteProduct } = cart;
 
@@ -34,7 +34,7 @@ export const CartItem: FC<IProductInCart> = ({
         </div>
         <Button
           onClick={() => {
-            deleteProduct(cartItemId);
+            deleteProduct(id);
           }}
         >
           Удалить
